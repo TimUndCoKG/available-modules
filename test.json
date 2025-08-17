@@ -1,3 +1,35 @@
-{
-  "name": "test-file"
-}
+
+  {
+      "module_name": "test-module",
+      "service_configs": [
+          {
+              "container_name": "test-frontend",
+              "compose_service": "test-frontend",
+              "docker_image": "nginx:alpine",
+              "dependencies": [],
+              "compose_volumes": [],
+              "compose_env_variables": ["NON_FIXED_VARIABLE", "NON_FIXED_VARIABLE-2"],
+              "compose_env_variables_fixed": [
+                  {
+                      "TEST_ENV_VARIABLE_FIXED": "test_value"
+                  },
+                  {
+                      "TEST_ENV_VARIABLE_FIXED-2": "test_value-2"
+                  }
+              ],
+              "container_ports": [45, 22034],
+              "compose_networks": []
+          },
+          {
+              "container_name": "test-backend",
+              "compose_service": "test-backend",
+              "docker_image": "nginx:alpine",
+              "dependencies": ["test-frontend"],
+              "compose_volumes": [],
+              "compose_env_variables": [],
+              "compose_env_variables_fixed": [],
+              "container_ports": [22034],
+              "compose_networks": []
+          }
+      ]
+  }
