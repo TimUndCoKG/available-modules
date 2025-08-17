@@ -1,3 +1,7 @@
+[
 {
-  "name": "teset"
+  "module_name": "test",
+  "dev_module": true,
+  "config_path": "/repos/timundcokg/available-modules/contents/test.json",
 }
+]
