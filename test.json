@@ -24,9 +24,7 @@
               "container_name": "test-backend", 
               "compose_service": "test-backend", 
               "docker_image": "nginx:alpine", 
-              "dependencies": [
-                "test-frontend"
-              ], 
+              "dependencies": [], 
               "compose_volumes": [], 
               "compose_env_variables": [], 
               "compose_env_variables_fixed": [], 
